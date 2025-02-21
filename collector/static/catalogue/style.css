@@ -1,0 +1,295 @@
+/* RESET */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style-position: inside;
+}
+/* END OF RESET */
+
+
+
+/*
+1. the .logo-title is changed to .logo
+2. the small responsiveness for nav bar needs to change
+3. maybe check the footer line space?
+*/
+
+/* 1 Margins and padding */
+
+header img {
+    width: 7rem;
+    padding: 0.8em 1em;
+}
+
+nav, main, footer {
+    padding: 2em;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+.edit {
+    padding:0 0.5em;
+}
+
+.artist li .actions a {
+    margin-left: 1em;
+}
+
+/* 2 Flexboxes */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.comments {
+    width: 50%;
+    text-align: left;
+}
+
+.artist li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.artist li .actions {
+    display: flex;
+}
+
+.album li {
+    display: flex;
+    justify-content: space-between; /* Spread items horizontally */
+    align-items: center; /* Align items vertically */
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;	
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+header h1 {
+    flex-grow: 1;
+}
+
+footer {
+    text-align: center;
+}
+
+footer img {
+    vertical-align: text-bottom;
+}
+
+main a.edit {
+    flex-direction: column;
+	align-items: flex-start;
+	text-align: right;
+}
+
+/* 3 TYPOGRAPHY */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 2; 
+}
+
+h1, h2 {
+    font-size: 2rem;
+}
+
+main h1 {
+    font-size: 3rem;
+}
+
+main ul, main p, main ol {
+    font-size: 1.3rem;
+}
+
+main a.edit {
+    font-size: 1.3rem;
+}
+
+footer {
+    font-size: 1rem;
+}
+
+.back {
+	font-size: 1.3rem;
+}
+	
+
+/* 4 COLOUR SCHEME & BORDERS */
+
+body {
+    background-color: black;
+    color: white;
+}
+
+header, footer {
+    background-color: #333;
+}
+
+ul li a:hover, footer a:hover, p a:hover, ol li a:hover, .back a:hover {
+    color: gray;
+}
+
+ul li a, footer a, p a, ol li a, .back a{
+    color: white;
+}
+
+.edit {
+    color: #F7E7CE;
+}
+
+
+/* 5 NAVIGATION */
+nav ul, footer ul, main ul {
+    list-style-type: none;
+}
+
+ul li a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+header a, nav a, footer a {
+    text-decoration: none;
+}
+
+.artist, .album {
+    list-style-type: none;
+	width: 50%;
+}
+
+main a.edit {
+    width: 50%;
+}
+/* 6 IMAGES */
+
+main {
+    background-image: url('images/background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+/* 7 RESPONSIVENESS */
+@media (max-width: 62em) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+        align-items: space-around;
+    }
+
+}
+
+@media (max-width: 48em) {
+    main {
+        padding: 1em;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    main p {
+        font-size: 1.2rem;
+    }
+    
+    main ul, main ol {
+        font-size: 1.2rem;
+    }
+
+}
+
+@media (max-width: 36em) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        align-items: space-around;
+    }
+
+    nav ul li {
+        margin: 0 0.5em;
+    }
+
+    main {
+        padding: 1em;
+        text-align: center;
+    }
+
+    main h1 {
+        font-size: 1.5rem;
+    }
+
+    main p {
+        font-size: 1rem;
+    }
+    
+	.artist li, .album li {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .actions {
+        justify-content: flex-start;
+        margin-top: 0.5em;
+    }
+	
+
+}
